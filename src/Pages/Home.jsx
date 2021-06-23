@@ -4,6 +4,7 @@ import "../styles/main.css";
 // import useFetch from '../hooks/useFetch';
 import { useState, useEffect } from "react";
 import PostList from "./PostsList";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -23,6 +24,14 @@ const Home = () => {
 
   return (
     <div className="home">
+      <nav className="navbar links">
+        
+        <Link to="/home"> Posts </Link>
+        <Link to="/postList">PostList</Link>
+      <Link to="/create">New Post</Link>
+       <Link to="/logout">Log Out </Link>
+       </nav>
+
       {/* { isPending && <div className='loading'> Please wait, your page is loading... </div>} */}
 
       {/* since the value of post is null at the very start, we  add a conditional rendering 

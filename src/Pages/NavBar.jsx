@@ -10,14 +10,9 @@ const NavBar = () => {
 
        
     return (
-      <nav className="navbar links">
-        
-        <Link to="/home"> Posts </Link>
-       <Link to="/register">Register</Link>
-       <Link to="/login">Login</Link>
-       {/* <Link to="/postList">PostList</Link>
-       <Link to="/userposts/:userid">UserPost</Link> */}
-      <Link to="/create">New Post</Link>
+     <nav className="navbar links">
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
         
       </nav>
     )

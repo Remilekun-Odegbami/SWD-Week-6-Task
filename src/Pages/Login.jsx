@@ -1,11 +1,9 @@
-
 import '../styles/register.css';
 
 import { useForm } from "react-hook-form";
 import { useHistory } from 'react-router-dom';
-import auth from '../components/auth';
 
-const Login = (props) => {
+const Login = () => {
 
     const { register, handleSubmit } = useForm()
     
@@ -68,16 +66,7 @@ const Login = (props) => {
                 />
                
 
-                <button id='btn' 
-                type='submit'
-                onClick = {
-                    () => {
-                        auth.login(() => {
-                            props.history.push('/home')
-                        })
-                    }
-                }
-                 > Log Me In</button>
+                <button id='btn' type='submit' > Log Me In</button>
 
                 <div>
                 <a href="/register" id='old-user'> New User? Register Me </a>

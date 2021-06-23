@@ -7,7 +7,6 @@ import Register from './Pages/Register';
 import Login from './Pages/Login';
 import NavBar from './Pages/NavBar';
 import Create from './Pages/Create';
-import { protectedRoute } from './components/protectedRoute';
 import '../src/App.css';
 
 
@@ -22,29 +21,31 @@ const App = () => {
     <Switch>
      
        {/* render home component */}
-      <protectedRoute exact path="/home"
-        component={Home} />
-
+      <Route exact path="/home">
+        < Home />
+       </Route>
         {/* render user post component */}
-       <protectedRoute path="/userposts/:userid"
-         component={UserPosts } />
-       
+       <Route path="/userposts/:userid">
+         <UserPosts />
+       </Route>
         {/* render Posts component */}
-       <protectedRoute exact path="/postList"
-        component={PostsList } />
-      
+       <Route exact path="/postList">
+        <PostsList />
+       </Route>
         {/* render Register component */}
-       <Route exact path="/register"
-        component={Register}/>
+       <Route exact path="/register">
+        <Register />
+       </Route>
        {/* render Login component */}
        <Route exact path ="/login">
-        component={Login}
+        <Login />
        </Route> 
+       {/* render the create new post page */}
+       <Route exact path='/create'>
+        <Create />
+       </Route>
        {/* render Error component */}
-       <protectedRoute exact path='/create'
-        component={Create }/>
-       
-       <Route  >
+       <Route >
         <ErrorPage />
        </Route>
     </Switch>

@@ -47,11 +47,9 @@ circle:last-of-type {
   }
 
   .error-link{
-    margin-left: 41%;
     padding-top: 20px;
     text-decoration: none;
     cursor: pointer;
-    margin-top: 10px;
   }
 
   .error-link:hover{

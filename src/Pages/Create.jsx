@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/create.css';
 
 
@@ -31,6 +32,9 @@ const Create = () => {
     return (
        <div className="create">
            <h1> Add a New Post </h1>
+            <Link to="/home"> Posts </Link>
+        <Link to="/postList">PostList</Link>
+      <Link to="/create">New Post</Link>
            <form onSubmit={handleSubmit}>
                <label> Post Title </label>
                <input 
